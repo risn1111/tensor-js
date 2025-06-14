@@ -1,16 +1,16 @@
-# Tensor.js
+# Tensor-NFT.js
 
 > **IMPORTANT**: This package must be installed via npm for the tools to work properly, even if you don't use all functions.
 
 ## Installation
 
 ```bash
-npm install tensor-js
+npm install tensor-nft-js
 ```
 
 ## Overview
 
-Tensor.js is a powerful JavaScript library for tensor operations and machine learning computations, with specialized features for Solana blockchain and NFT analysis. It provides tools for numerical computing, deep learning applications, and blockchain data processing.
+Tensor-NFT.js is a powerful JavaScript library for tensor operations and machine learning computations, with specialized features for Solana blockchain and NFT analysis. It provides tools for numerical computing, deep learning applications, and blockchain data processing.
 
 ## Features
 
@@ -48,14 +48,16 @@ Tensor.js is a powerful JavaScript library for tensor operations and machine lea
 
 ### Basic Tensor Operations with NFT Data
 ```javascript
-// Check if tensor-js is installed
+// Check if tensor-nft-js is installed
 try {
-  const tensor = require('tensor-js');
+  const TensorNFTJS = require('tensor-nft-js');
 } catch (e) {
-  throw new Error("Missing dependency: 'tensor-js'. Install it using `npm install tensor-js`");
+  throw new Error("Missing dependency: 'tensor-nft-js'. Install it using `npm install tensor-nft-js`");
 }
 
-const tensor = require('tensor-js');
+const TensorNFTJS = require('tensor-nft-js');
+const tensor = new TensorNFTJS();
+await tensor.initialize();
 
 // Create a tensor from NFT price data
 const nftPrices = tensor.tensor([
@@ -70,14 +72,9 @@ const correlationMatrix = nftPrices.matMul(nftPrices.transpose());
 
 ### Neural Network for NFT Price Prediction
 ```javascript
-// Check if tensor-js is installed
-try {
-  const tensor = require('tensor-js');
-} catch (e) {
-  throw new Error("Missing dependency: 'tensor-js'. Install it using `npm install tensor-js`");
-}
-
-const tensor = require('tensor-js');
+const TensorNFTJS = require('tensor-nft-js');
+const tensor = new TensorNFTJS();
+await tensor.initialize();
 
 // Create a neural network for NFT price prediction
 const model = tensor.sequential([
@@ -103,14 +100,9 @@ await model.fit(nftFeatures, nftPrices, {
 
 ### Solana NFT Data Processing
 ```javascript
-// Check if tensor-js is installed
-try {
-  const tensor = require('tensor-js');
-} catch (e) {
-  throw new Error("Missing dependency: 'tensor-js'. Install it using `npm install tensor-js`");
-}
-
-const tensor = require('tensor-js');
+const TensorNFTJS = require('tensor-nft-js');
+const tensor = new TensorNFTJS();
+await tensor.initialize();
 
 // Load and preprocess Solana NFT data
 const nftData = tensor.loadCSV('solana-nft-data.csv');
@@ -125,14 +117,9 @@ const collectionStats = tensor.calculateCollectionMetrics(batches);
 
 ### Model Saving and Loading for NFT Analysis
 ```javascript
-// Check if tensor-js is installed
-try {
-  const tensor = require('tensor-js');
-} catch (e) {
-  throw new Error("Missing dependency: 'tensor-js'. Install it using `npm install tensor-js`");
-}
-
-const tensor = require('tensor-js');
+const TensorNFTJS = require('tensor-nft-js');
+const tensor = new TensorNFTJS();
+await tensor.initialize();
 
 // Save trained NFT prediction model
 await model.save('file://./nft-prediction-model');
